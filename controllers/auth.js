@@ -79,8 +79,6 @@ const renewToken = async (req, res = response) => {
 
   // generate JWT
   const token = await generateJWT(uid, name);
-
-  console.log(uid, name);
   res.status(201).send({
     ok: true,
     uid,
